@@ -10,7 +10,7 @@ class Navbar extends Component {
         >
           <div className="container">
             <a className="navbar-brand" href="landing.html">
-              Conneected;DEV
+              ConneectedDEV
             </a>
             <button
               className="navbar-toggler"
