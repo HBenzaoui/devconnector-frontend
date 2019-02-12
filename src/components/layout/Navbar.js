@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Navbar extends Component {
   render() {
@@ -6,12 +7,12 @@ class Navbar extends Component {
       <div>
         <nav
           className="navbar navbar-expand-sm navbar-dark mb-4"
-          style={{ backgroundColor: '#2C3E50' }}
+          style={{ backgroundColor: '#000' }}
         >
           <div className="container">
-            <a className="navbar-brand" href="landing.html">
+            <Link to="/" className="navbar-brand">
               ConneectedDEV
-            </a>
+            </Link>
             <button
               className="navbar-toggler"
               type="button"
@@ -24,23 +25,23 @@ class Navbar extends Component {
             <div className="collapse navbar-collapse" id="mobile-nav">
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
-                  <a className="nav-link" href="profiles.html">
+                  <Link to="/profile" className="nav-link">
                     {' '}
                     Developers
-                  </a>
+                  </Link>
                 </li>
               </ul>
 
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
-                  <a className="nav-link" href="register.html">
+                  <Link to="/register" className="nav-link">
                     Sign Up
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="login.html">
+                  <Link to="/login" className="nav-link">
                     Login
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
