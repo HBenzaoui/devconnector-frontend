@@ -27,7 +27,7 @@ if (localStorage.jwtToken) {
   //chgeck for expried token
   const currentTime = Date.now() / 1000;
   if (decoded.exp < currentTime) {
-    store.dispatch(logoutUser);
+    store.dispatch(logoutUser());
     //TODO: Clear current Profile
     //Redirect to login
     window.location.href = '/login';
