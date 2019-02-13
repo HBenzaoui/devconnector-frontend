@@ -17,7 +17,7 @@ export const registerUser = (userData, history) => dispatch => {
     );
 };
 
-//Login new user
+//Login the user
 export const loginUser = userData => dispatch => {
   axios
     .post('/api/users/login', userData)
@@ -47,4 +47,14 @@ export const setCurrentUser = decoded => {
     type: SET_CURRENT_USER,
     payload: decoded
   };
+};
+
+//Logout
+export const logoutUser = userData => dispatch => {
+  // Remove token from locastorage
+  localStorage.removeItem('jwtToken');
+  //remove auth header for future request
+  setAuthToken(false);
+  //Set cuurent user to whcih will set isAuthinticated to false
+  dispatch(setCurrentUser({}));
 };
