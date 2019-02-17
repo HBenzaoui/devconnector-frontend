@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const TextFieldGroup = ({
   name,
@@ -10,7 +10,7 @@ const TextFieldGroup = ({
   error,
   info,
   type,
-  onChnage,
+  onChange,
   disbaled
 }) => {
   return (
@@ -24,7 +24,7 @@ const TextFieldGroup = ({
         name={name}
         value={value}
         disbaled={disbaled}
-        onChange={onChnage}
+        onChange={onChange}
       />
       {info && <small className="form-text text-muted">{info}</small>}
       {error && <div className="invalid-feedback">{error}</div>}
@@ -33,14 +33,14 @@ const TextFieldGroup = ({
 };
 
 TextFieldGroup.propTypes = {
-  name: propTypes.string.isRequired,
-  placeholder: propTypes.string,
-  value: propTypes.string.isRequired,
-  error: propTypes.string,
-  info: propTypes.string,
-  type: propTypes.string.isRequired,
-  onChnage: propTypes.func.isRequired,
-  disbaled: propTypes.string
+  name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
+  value: PropTypes.string.isRequired,
+  error: PropTypes.string,
+  info: PropTypes.string,
+  type: PropTypes.string.isRequired,
+  onChnage: PropTypes.func.isRequired,
+  disbaled: PropTypes.string
 };
 
 TextFieldGroup.deffaultProps = {
