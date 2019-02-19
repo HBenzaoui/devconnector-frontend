@@ -26,9 +26,11 @@ class Dashboard extends Component {
         //User logedf in but didint create profile yet
         dashboardContent = (
           <div>
-            <p className="lead text-muted">Welcome {user}</p>
+            <p className="lead text-muted">Welcome {user.name}</p>
             <p>Start working on your profile </p>
-            <Link to="prodile/add" />
+            <Link to="/create-profile" className="btn btn-lg btn-info">
+              Create Profile
+            </Link>
           </div>
         );
       }
