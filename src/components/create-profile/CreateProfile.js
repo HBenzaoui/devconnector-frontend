@@ -24,7 +24,19 @@ export class CreateProfile extends Component {
     instagram: '',
     errors: {}
   };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    console.log('Submit');
+  };
+  handleChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
+
   render() {
+    const { errors } = this.state;
     return (
       <div className="create-profile">
         <div className="container">
@@ -35,6 +47,16 @@ export class CreateProfile extends Component {
                 Let's get some information to make your profile stand out
               </p>
               <small className="d-block pb-3">* = requied fields</small>
+              <form onSubmit={this.handleSubmit}>
+                <TextFieldGroup
+                  placeholder="* Profile Handle"
+                  name="handle"
+                  value={this.state.handle}
+                  onChange={this.handleChange}
+                  error={errors.handle}
+                  info="A unique handle for your profile URL, Your full name, company name, nickname"
+                />
+              </form>
             </div>
           </div>
         </div>
