@@ -44,11 +44,39 @@ export class CreateProfile extends Component {
       SocialInputs = (
         <React.Fragment>
           <InputGroup
+            placeholder="LinkedIn Profile URL"
+            name="linkedin"
+            value={this.state.linkedin}
+            onChange={this.handleChange}
+            error={errors.linkedin}
+          />
+          <InputGroup
             placeholder="Twitter Profile URL"
             name="twitter"
             value={this.state.twitter}
             onChange={this.handleChange}
             error={errors.twitter}
+          />
+          <InputGroup
+            placeholder="Facebook Profile URL"
+            name="facebook"
+            value={this.state.facebook}
+            onChange={this.handleChange}
+            error={errors.facebook}
+          />
+          <InputGroup
+            placeholder="Youtube Channel URL"
+            name="youtube"
+            value={this.state.youtube}
+            onChange={this.handleChange}
+            error={errors.youtube}
+          />
+          <InputGroup
+            placeholder="Instagram page URL"
+            name="instagram"
+            value={this.state.instagram}
+            onChange={this.handleChange}
+            error={errors.instagram}
           />
         </React.Fragment>
       );
