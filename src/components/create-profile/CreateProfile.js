@@ -36,7 +36,23 @@ export class CreateProfile extends Component {
   };
 
   render() {
-    const { errors } = this.state;
+    const { errors, displaySocialInputs } = this.state;
+
+    let SocialInputs;
+
+    if (displaySocialInputs) {
+      SocialInputs = (
+        <React.Fragment>
+          <InputGroup
+            placeholder="Twitter Profile URL"
+            name="twitter"
+            value={this.state.twitter}
+            onChange={this.handleChange}
+            error={errors.twitter}
+          />
+        </React.Fragment>
+      );
+    }
 
     // Select options for status
     const options = [
@@ -139,6 +155,12 @@ export class CreateProfile extends Component {
                   </button>
                   <span className="text-muted"> Optional</span>
                 </div>
+                {SocialInputs}
+                <input
+                  type="submit"
+                  value="submit"
+                  className="btn btn-info btn-block mt-4"
+                />
               </form>
             </div>
           </div>
