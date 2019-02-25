@@ -2,15 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const InputGroup = ({
-  name,
-  placeholder,
-  value,
-  error,
-  icon,
-  type,
-  onChange
-}) => {
+const InputGroup = ({ name, placeholder, value, error, icon, onChange }) => {
   return (
     <div className="input-group mb-3">
       <div className="input-group-prepend">
@@ -38,7 +30,6 @@ InputGroup.propTypes = {
   value: PropTypes.string.isRequired,
   error: PropTypes.string,
   icon: PropTypes.string,
-  type: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired
 };
 
