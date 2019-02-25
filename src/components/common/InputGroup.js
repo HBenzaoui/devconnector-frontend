@@ -33,8 +33,4 @@ InputGroup.propTypes = {
   onChange: PropTypes.func.isRequired
 };
 
-InputGroup.deffaultProps = {
-  type: 'text'
-};
-
 export default InputGroup;
