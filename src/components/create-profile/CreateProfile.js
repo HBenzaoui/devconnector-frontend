@@ -69,6 +69,15 @@ export class CreateProfile extends Component {
                   error={errors.handle}
                   info="A unique handle for your profile URL, Your full name, company name, nickname"
                 />
+                <SelectListGroup
+                  placeholder="Status"
+                  name="status"
+                  value={this.state.status}
+                  onChange={this.handleChange}
+                  options={options}
+                  error={errors.status}
+                  info="Tell us where you at in your career"
+                />
               </form>
             </div>
           </div>
