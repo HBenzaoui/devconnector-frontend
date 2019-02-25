@@ -78,6 +78,30 @@ export class CreateProfile extends Component {
                   error={errors.status}
                   info="Tell us where you at in your career"
                 />
+                <TextFieldGroup
+                  placeholder="Company"
+                  name="company"
+                  value={this.state.company}
+                  onChange={this.handleChange}
+                  error={errors.company}
+                  info="Name your own company or the one you work for"
+                />
+                <TextFieldGroup
+                  placeholder="Website"
+                  name="company"
+                  value={this.state.company}
+                  onChange={this.handleChange}
+                  error={errors.company}
+                  info="Your personal website or your company's website"
+                />
+                <TextFieldGroup
+                  placeholder="Location"
+                  name="location"
+                  value={this.state.Location}
+                  onChange={this.handleChange}
+                  error={errors.Location}
+                  info="City & State or province (eg. Bab Ezzouar, Algiers)"
+                />
               </form>
             </div>
           </div>
