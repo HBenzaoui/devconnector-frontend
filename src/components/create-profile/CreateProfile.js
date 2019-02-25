@@ -46,6 +46,7 @@ export class CreateProfile extends Component {
           <InputGroup
             placeholder="LinkedIn Profile URL"
             name="linkedin"
+            icon="fab fa-linkedin"
             value={this.state.linkedin}
             onChange={this.handleChange}
             error={errors.linkedin}
@@ -53,6 +54,7 @@ export class CreateProfile extends Component {
           <InputGroup
             placeholder="Twitter Profile URL"
             name="twitter"
+            icon="fab fa-twitter"
             value={this.state.twitter}
             onChange={this.handleChange}
             error={errors.twitter}
@@ -60,6 +62,7 @@ export class CreateProfile extends Component {
           <InputGroup
             placeholder="Facebook Profile URL"
             name="facebook"
+            icon="fab fa-facebook"
             value={this.state.facebook}
             onChange={this.handleChange}
             error={errors.facebook}
@@ -67,6 +70,7 @@ export class CreateProfile extends Component {
           <InputGroup
             placeholder="Youtube Channel URL"
             name="youtube"
+            icon="fab fa-youtube"
             value={this.state.youtube}
             onChange={this.handleChange}
             error={errors.youtube}
@@ -74,6 +78,7 @@ export class CreateProfile extends Component {
           <InputGroup
             placeholder="Instagram page URL"
             name="instagram"
+            icon="fab fa-instagram"
             value={this.state.instagram}
             onChange={this.handleChange}
             error={errors.instagram}
