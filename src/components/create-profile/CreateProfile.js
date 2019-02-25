@@ -37,6 +37,19 @@ export class CreateProfile extends Component {
 
   render() {
     const { errors } = this.state;
+
+    // Select options for status
+    const options = [
+      { label: '* Select professtional Status', value: 0 },
+      { label: 'Developer', value: 'Developer' },
+      { label: 'Junior Developer', value: 'Junior Developer' },
+      { label: 'Senior Developer', value: 'Senior Developer' },
+      { label: 'Manager', value: 'Manager' },
+      { label: 'Studen or Learner', value: 'Studen or Learner' },
+      { label: 'Instructor or Teacher', value: 'Instructor or Teacher' },
+      { label: 'Intern', value: 'Intern' },
+      { label: 'Other', value: 'Other' }
+    ];
     return (
       <div className="create-profile">
         <div className="container">
