@@ -102,6 +102,30 @@ export class CreateProfile extends Component {
                   error={errors.Location}
                   info="City & State or province (eg. Bab Ezzouar, Algiers)"
                 />
+                <TextFieldGroup
+                  placeholder="* Skills"
+                  name="skills"
+                  value={this.state.skills}
+                  onChange={this.handleChange}
+                  error={errors.skills}
+                  info="Use comma separated values (eg. HTML,CSS,JavaScript)"
+                />
+                <TextFieldGroup
+                  placeholder="Github Username"
+                  name="githubusername"
+                  value={this.state.githubusername}
+                  onChange={this.handleChange}
+                  error={errors.githubusername}
+                  info="This's to show your latest GitHub repositories"
+                />
+                <TextAreaFieldGroup
+                  placeholder="Bio"
+                  name="bio"
+                  value={this.state.bio}
+                  onChange={this.handleChange}
+                  error={errors.bio}
+                  info="Tell us about you"
+                />
               </form>
             </div>
           </div>
