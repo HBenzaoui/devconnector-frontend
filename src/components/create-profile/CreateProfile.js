@@ -162,10 +162,10 @@ export class CreateProfile extends Component {
                 />
                 <TextFieldGroup
                   placeholder="Website"
-                  name="company"
-                  value={this.state.company}
+                  name="website"
+                  value={this.state.website}
                   onChange={this.handleChange}
-                  error={errors.company}
+                  error={errors.website}
                   info="Your personal website or your company's website"
                 />
                 <TextFieldGroup
@@ -202,6 +202,7 @@ export class CreateProfile extends Component {
                 />
                 <div className="mb-3">
                   <button
+                    type="button"
                     onClick={() => {
                       this.setState(prevState => ({
                         displaySocialInputs: !prevState.displaySocialInputs
