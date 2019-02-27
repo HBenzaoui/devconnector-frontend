@@ -171,9 +171,9 @@ export class CreateProfile extends Component {
                 <TextFieldGroup
                   placeholder="Location"
                   name="location"
-                  value={this.state.Location}
+                  value={this.state.location}
                   onChange={this.handleChange}
-                  error={errors.Location}
+                  error={errors.location}
                   info="City & State or province (eg. Bab Ezzouar, Algiers)"
                 />
                 <TextFieldGroup

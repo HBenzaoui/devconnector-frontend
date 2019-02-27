@@ -9,7 +9,7 @@ import InputGroup from '../common/InputGroup';
 import { createProfile, getCurrentProfile } from '../../actions/profileActions';
 import isEmpty from '../../validation/is-empty';
 
-export class CreateProfile extends Component {
+export class EditProfile extends Component {
   state = {
     displaySocialInputs: false,
     handle: '',
@@ -53,19 +53,19 @@ export class CreateProfile extends Component {
       profile.bio = !isEmpty(profile.bio) ? profile.bio : '';
 
       profile.social = !isEmpty(profile.social) ? profile.social : {};
-      profile.social.twitter = !isEmpty(profile.social.twitter)
+      profile.twitter = !isEmpty(profile.social.twitter)
         ? profile.social.twitter
         : '';
-      profile.social.facebook = !isEmpty(profile.social.facebook)
+      profile.facebook = !isEmpty(profile.social.facebook)
         ? profile.social.facebook
         : '';
-      profile.social.linkedin = !isEmpty(profile.social.linkedin)
+      profile.linkedin = !isEmpty(profile.social.linkedin)
         ? profile.social.linkedin
         : '';
-      profile.social.youtube = !isEmpty(profile.social.youtube)
+      profile.youtube = !isEmpty(profile.social.youtube)
         ? profile.social.youtube
         : '';
-      profile.social.instagram = !isEmpty(profile.social.instagram)
+      profile.instagram = !isEmpty(profile.social.instagram)
         ? profile.social.instagram
         : '';
 
@@ -76,7 +76,7 @@ export class CreateProfile extends Component {
         website: profile.website,
         location: profile.location,
         status: profile.status,
-        skills: profile.skills,
+        skills: skillsCSV,
         githubusername: profile.githubusername,
         bio: profile.bio,
         twitter: profile.twitter,
@@ -223,9 +223,9 @@ export class CreateProfile extends Component {
                 <TextFieldGroup
                   placeholder="Location"
                   name="location"
-                  value={this.state.Location}
+                  value={this.state.location}
                   onChange={this.handleChange}
-                  error={errors.Location}
+                  error={errors.location}
                   info="City & State or province (eg. Bab Ezzouar, Algiers)"
                 />
                 <TextFieldGroup
@@ -281,7 +281,7 @@ export class CreateProfile extends Component {
   }
 }
 
-CreateProfile.propTypes = {
+EditProfile.propTypes = {
   createProfile: PropTypes.func.isRequired,
   getCurrentProfile: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired,
@@ -296,4 +296,4 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   { createProfile, getCurrentProfile }
-)(withRouter(CreateProfile));
+)(withRouter(EditProfile));
