@@ -28,4 +28,4 @@ class AddExperience extends Component {
   }
 }
 
-export default AddExperience;
+export default connect()(withRruter(AddExperience));
