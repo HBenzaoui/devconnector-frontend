@@ -22,9 +22,16 @@ class AddExperience extends Component {
     const { errors } = this.state;
 
     return (
-      <div>
-        <h1>Experience</h1>
-        <h1>Experience</h1>
+      <div className="add-experience">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-8 m-auto">
+              <Link to="/dashboard" className="btn btn-light">
+                Go Back
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
