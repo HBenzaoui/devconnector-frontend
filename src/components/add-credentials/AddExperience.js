@@ -19,6 +19,8 @@ class AddExperience extends Component {
   };
 
   render() {
+    const { errors } = this.state;
+
     return (
       <div>
         <h1>Experience</h1>
