@@ -34,6 +34,7 @@ class AddExperience extends Component {
                 Add any job or postiontion that you have had in the past or
                 current
               </p>
+              <small className="d-block pb-3">* = required fields</small>
             </div>
           </div>
         </div>
