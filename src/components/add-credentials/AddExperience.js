@@ -72,6 +72,7 @@ class AddExperience extends Component {
                   value={this.state.to}
                   onChange={this.handleChange}
                   errors={errors.to}
+                  disabled={this.state.disabled ? 'disabled' : ''}
                 />
               </form>
             </div>
