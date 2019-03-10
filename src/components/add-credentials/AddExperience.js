@@ -18,6 +18,18 @@ class AddExperience extends Component {
     disabled: false
   };
 
+  handleChange = e => {
+    //
+  };
+
+  handelSubmit = e => {
+    e.preventDefault();
+  };
+
+  handleCheck = e => {
+    //
+  };
+
   render() {
     const { errors } = this.state;
 
