@@ -6,29 +6,37 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 class AddExperience extends Component {
-  state = {
-    company: '',
-    title: '',
-    location: '',
-    from: '',
-    to: '',
-    current: false,
-    description: '',
-    errors: {},
-    disabled: false
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      company: '',
+      title: '',
+      location: '',
+      from: '',
+      to: '',
+      current: false,
+      description: '',
+      errors: {},
+      disabled: false
+    };
+    this.handleCheck = this.handleCheck.bind(this);
+  }
+
+  handleCheck(e) {
+    this.setState({
+      disabled: !this.state.disabled,
+      current: !this.state.current
+    });
+    console.log('Checked');
+  }
 
   handleChange = e => {
-    console.log('Chnage');
+    this.setState({ [e.target.name]: e.target.value });
   };
 
   handelSubmit = e => {
     e.preventDefault();
     console.log('Submit');
-  };
-
-  handleCheck = e => {
-    console.log('Checked');
   };
 
   render() {
@@ -54,21 +62,21 @@ class AddExperience extends Component {
                   name="company"
                   value={this.state.company}
                   onChange={this.handleChange}
-                  errors={errors.company}
+                  error={errors.company}
                 />
                 <TextFieldGroup
                   placeholder="* Job Title"
                   name="title"
                   value={this.state.title}
                   onChange={this.handleChange}
-                  errors={errors.title}
+                  error={errors.title}
                 />
                 <TextFieldGroup
                   placeholder="Location"
                   name="location"
                   value={this.state.location}
                   onChange={this.handleChange}
-                  errors={errors.location}
+                  error={errors.location}
                 />
                 <h6>From Date</h6>
                 <TextFieldGroup
@@ -76,7 +84,7 @@ class AddExperience extends Component {
                   type="date"
                   value={this.state.from}
                   onChange={this.handleChange}
-                  errors={errors.from}
+                  error={errors.from}
                 />
                 <h6>To Date</h6>
                 <TextFieldGroup
@@ -84,13 +92,13 @@ class AddExperience extends Component {
                   type="date"
                   value={this.state.to}
                   onChange={this.handleChange}
-                  errors={errors.to}
+                  error={errors.to}
                   disabled={this.state.disabled ? 'disabled' : ''}
                 />
                 <div className="form-check mb-4">
                   <input
                     type="checkbox"
-                    className="from-check-input"
+                    className="form-check-input"
                     name="current"
                     value={this.state.current}
                     checked={this.state.current}
@@ -106,7 +114,7 @@ class AddExperience extends Component {
                   name="description"
                   value={this.state.description}
                   onChange={this.handleChange}
-                  errors={errors.description}
+                  error={errors.description}
                   info="Tell us about this job"
                 />
                 <input
