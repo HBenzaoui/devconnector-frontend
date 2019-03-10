@@ -65,6 +65,14 @@ class AddExperience extends Component {
                   onChange={this.handleChange}
                   errors={errors.from}
                 />
+                <h6>To Date</h6>
+                {/* <TextFieldGroup
+                  name="from"
+                  type="date"
+                  value={this.state.from}
+                  onChange={this.handleChange}
+                  errors={errors.from}
+                /> */}
               </form>
             </div>
           </div>
