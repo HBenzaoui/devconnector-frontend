@@ -96,11 +96,10 @@ class AddExperience extends Component {
                   errors={errors.description}
                   info="Tell us about this job"
                 />
-                >
                 <input
                   type="submit"
                   value="Submit"
-                  classNam="btn btn-info btn-block mt-4"
+                  className="btn btn-info btn-block mt-4"
                 />
               </form>
             </div>
