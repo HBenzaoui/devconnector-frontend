@@ -19,15 +19,16 @@ class AddExperience extends Component {
   };
 
   handleChange = e => {
-    //
+    console.log('Chnage');
   };
 
   handelSubmit = e => {
     e.preventDefault();
+    console.log('Submit');
   };
 
   handleCheck = e => {
-    //
+    console.log('Checked');
   };
 
   render() {
