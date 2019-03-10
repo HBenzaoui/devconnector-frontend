@@ -57,6 +57,7 @@ class AddExperience extends Component {
                   onChange={this.handleChange}
                   errors={errors.location}
                 />
+                <h6>From Date</h6>
               </form>
             </div>
           </div>
