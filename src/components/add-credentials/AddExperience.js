@@ -84,7 +84,9 @@ class AddExperience extends Component {
                     onChange={this.handleCheck}
                     id="current"
                   />
-                  {/* <label htmlFor="current" className='form-check-labled'></label> */}
+                  <label htmlFor="current" className="form-check-labled">
+                    Current Job
+                  </label>
                 </div>
               </form>
             </div>
