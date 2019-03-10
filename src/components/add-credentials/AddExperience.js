@@ -74,6 +74,18 @@ class AddExperience extends Component {
                   errors={errors.to}
                   disabled={this.state.disabled ? 'disabled' : ''}
                 />
+                <div className="form-check mb-4">
+                  <input
+                    type="checkbox"
+                    className="from-check-input"
+                    name="current"
+                    value={this.state.current}
+                    checked={this.state.current}
+                    onChange={this.handleCheck}
+                    id="current"
+                  />
+                  {/* <label htmlFor="current" className='form-check-labled'></label> */}
+                </div>
               </form>
             </div>
           </div>
