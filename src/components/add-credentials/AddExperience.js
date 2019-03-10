@@ -84,10 +84,18 @@ class AddExperience extends Component {
                     onChange={this.handleCheck}
                     id="current"
                   />
-                  <label htmlFor="current" className="form-check-labled">
+                  <label htmlFor="current" className="form-check-label">
                     Current Job
                   </label>
                 </div>
+                <TextAreaFieldGroup
+                  placeholder="Job Description"
+                  name="description"
+                  value={this.state.description}
+                  onChange={this.handleChange}
+                  errors={errors.description}
+                  info="Tell us about this job"
+                />
               </form>
             </div>
           </div>
