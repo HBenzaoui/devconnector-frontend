@@ -42,11 +42,13 @@ class AddExperience extends Component {
       company: this.state.company,
       title: this.state.title,
       location: this.state.location,
-      company: this.state.company,
-      company: this.state.company,
-      company: this.state.company,
-      company: this.state.company
+      from: this.state.from,
+      to: this.state.to,
+      current: this.state.current,
+      description: this.state.description
     };
+
+    this.props.addExperience(expData, this.props.history);
   };
 
   render() {
