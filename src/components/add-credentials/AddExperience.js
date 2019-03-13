@@ -37,7 +37,16 @@ class AddExperience extends Component {
 
   handelSubmit = e => {
     e.preventDefault();
-    console.log('Submit');
+
+    const expData = {
+      company: this.state.company,
+      title: this.state.title,
+      location: this.state.location,
+      company: this.state.company,
+      company: this.state.company,
+      company: this.state.company,
+      company: this.state.company
+    };
   };
 
   render() {
