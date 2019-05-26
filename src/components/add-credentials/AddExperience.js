@@ -6,8 +6,6 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { addExperience } from '../../actions/profileActions';
 
-
-//TODO
 //TODO
 //TODO
 //TODO
